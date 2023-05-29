@@ -200,7 +200,7 @@ function draw() {
   text("1. Yoga Andriyanto (121160008)"    ,22,510)
   text("2. Tiara Juliana (121160107)"      ,22,535)
   text("3. Cornelia Marsela (121160014)"   ,300,510)
-  text("4. Peniel Manoah J H (191160092)"    ,300,535)
+  text("4. Peniel Manoah J H (119160092)"  ,300,535)
   text("5. Eni Perlove (121160088)"        ,590,510)
   text("6. Dyah Ayu W (121160073)"         ,590,535)
   text("7. Risma Dewi (121160051)"         ,850,510)
