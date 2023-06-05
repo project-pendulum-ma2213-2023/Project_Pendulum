@@ -1,11 +1,11 @@
 //Inisiasi Variabel
-let theta;                  // sudut awal
-let pTali    = 150;         // panjang tali
+let theta    = 0;           // sudut awal
+let pTali    = 180;         // panjang tali
 let thetaVel = 0;           // kecepatan sudut awal
 let thetaAcc = 0;           // percepatan sudut awal
 let ballSize = 40;          // Ukuran bola
 let gravity  = 0;           // gravitasi
-let damping  = 0;           // redaman awal
+let damping  = 0.00;        // redaman awal
 
 //Gambar
 let sudut;
@@ -76,65 +76,65 @@ function Kdamping(){
   
   if (damping < 0) {
     damping = 0;
- }
+  }
 }
 
 
 function setup() {
-  createCanvas(1200, 550);
+  createCanvas(1200, 620);
   
   //tombol Reset
   let tombolReset = createButton("Reset Angka");
-  tombolReset.position(1085, 125);
+  tombolReset.position(1090, 500);
   tombolReset.mousePressed(resetNilai)
   
   //tomboh tambah panjang
   let tTali = createButton("+")
-  tTali.position (270,125)
+  tTali.position (897,185)
   tTali.mousePressed(Ttali)
   
   //Tombol Kurangi Panjang
   let kTali = createButton("-")
-  kTali.position (240,125)
+  kTali.position (833,185)
   kTali.mousePressed(Ktali)
   
   
   //tomboh tambah besar bola
   let tBola = createButton("+")
-  tBola.position (470,125)
+  tBola.position (897,255)
   tBola.mousePressed(Tbola)
   
   //Tombol Kurangi Besar Bola
   let kBola = createButton("-")
-  kBola.position (440,125)
+  kBola.position (833,255)
   kBola.mousePressed(Kbola)
   
   
   //Tombol tambah Gravitasi
   let tGravitasi = createButton("+")
-  tGravitasi.position (660,125)
+  tGravitasi.position (897,325)
   tGravitasi.mousePressed(Tgravitasi)
   
   //Tombol Kurangi Gravitasi
   let kGravitasi = createButton("-")
-  kGravitasi.position (630,125)
+  kGravitasi.position (833,325)
   kGravitasi.mousePressed(Kgravitasi)
   
   
   //Tombol tambah Redaman
   let tDamping = createButton("+")
-  tDamping.position (870,125)
+  tDamping.position (897,395)
   tDamping.mousePressed(Tdamping)
   
   //Tombol Kurangi Redaman
   let kDamping = createButton("-")
-  kDamping.position (840,125)
+  kDamping.position (833,395)
   kDamping.mousePressed(Kdamping)
   
   
   //menambahkan besar sudut awal
   s = createInput(0)
-  s.position(30, 125)
+  s.position(833, 125)
   s.changed(sudut)
   sudut();
 
@@ -144,92 +144,79 @@ function sudut(){
 }
 
 function draw() {
-  background("#000852");
+  background("#121F96FC");
   
   //Header
-  fill("#A2A6B7")
+  fill("#88A6CD")
   rect(20,10,1160,70)
   
   fill("black")
   textSize(25)
   text("P R O J E C T   P E N D U L U M"                 ,420,42)
   textSize(15)
-  text("Mata Kuliah Visualisasi Dalam Sains (MA 2213)"                ,445,65)
-  
+  text("Mata Kuliah Visualisasi Dalam Sains (MA 2213)"   ,445,65)
   
   image(mtk,340,15,50,50)
   image(itera,820,15,50,50)
   
   
   //Navigation Bar
-  fill("#A2A6B7")
-  rect(20,90,1160,60)
-  
+  fill("#88A6CD")
+  rect(820,90,360,440)
   
   //Content
-  rect(20,160,790,300)
-  
-  
-  //Sidebar
-  rect(820,160,360,300)
-  
-  fill("black")
-  textSize(14)
-  text("Pendulum merupakan contoh sistem fisik yang",845,180)
-  text("menggambarkan gerakan periodik. Gerakan"    ,845,200)
-  text("pendulum dipengaruhi oleh gaya gravitasi"   ,845,220)
-  text("yang bekerja pada massa pendulum, serta"    ,845,240)
-  text("panjang dan sudut awalnya"                  ,845,260)
-  
-  text("Persamaan Pendulum Sederhana :",845,300)
-  text("ω(t) = ω(t-∆t) + ((-g)/L(sin⁡(θ(t-∆t)))) * ∆t",845,320)
-  text("θ(t)  = θ(t-∆t) + ω(t) * ∆t",845,345)
-  
-  text("Persamaan Pendulum Dengan Faktor Redaman :",845,390)
-  text("ω(t) = ω(t-∆t) + ((-g)/L(sin⁡(θ(t-∆t)) - (Q.ω(t-∆t)))) * ∆t",845,410)
-  text("θ(t)  = θ(t-∆t) + ω(t) * ∆t",845,435)
-  
+  rect(20,90,790,440)
   
   //Fotter
-  fill("#A2A6B7")
-  rect(20,470, 1160,70)
+  rect(20,540, 1160,70)
   
   fill("black")
   textSize(15)
-  text("INFORMASI KELOMPOK 2 :",22,485)
-  text("1. Yoga Andriyanto (121160008)"    ,22,510)
-  text("2. Tiara Juliana (121160107)"      ,22,535)
-  text("3. Cornelia Marsela (121160014)"   ,300,510)
-  text("4. Peniel Manoah J H (119160092)"  ,300,535)
-  text("5. Eni Perlove (121160088)"        ,590,510)
-  text("6. Dyah Ayu W (121160073)"         ,590,535)
-  text("7. Risma Dewi (121160051)"         ,850,510)
+  text("INFORMASI KELOMPOK 2 :"            ,22,555)
+  text("1. Yoga Andriyanto (121160008)"    ,22,580)
+  text("2. Tiara Juliana (121160107)"      ,22,605)
+  text("3. Cornelia Marsela (121160014)"   ,300,580)
+  text("4. Peniel Manoah J H (1911600)"    ,300,605)
+  text("5. Eni Perlove (121160088)"        ,590,580)
+  text("6. Dyah Ayu W (121160073)"         ,590,605)
+  text("7. Risma Dewi (121160051)"         ,850,580)
   
   
   //Navigation Control
   fill("black")
   textSize(16)
-  text("Masukkan Sudut Awal :"     ,22,110)
+  text("Masukkan Sudut Awal :"     ,825,110)
   
+  //Kotak Angka
+  fill("white")
+  rect(850,177,35,22)
+  rect(850,247,35,22)
+  rect(850,317,35,22)
+  rect(850,387,35,22)
   
   //Menampilkan nilai variabel
   textSize(16)
   fill("black")
-  text("Panjang Tali : "+pTali           ,230,110)
-  text("Besar Bola : "+ballSize          ,430,110)
-  text("Gaya Gravitasi : "+gravity       ,620,110)
-  text("Besar Redaman : "+damping        ,830,110)
-  // text("Kecepatan Sudut :"               ,22,430)
-  // text(""+thetaVel                       ,22,450)
+  text("Panjang Tali Pendulum :"       ,825,170)
+  text(""+pTali                        ,853,195)
+  text("Besar Bola Pendulum: "         ,825,240)
+  text(""+ballSize                     ,853,265)
+  text("Gaya Gravitasi : "             ,825,310)
+  text(""+gravity                      ,861,335)
+  text("Besar Redaman : "              ,825,380)
+  text(""+round(damping,3)             ,853,405)
+  text("Kecepatan Sudut : "            ,825,450)
+  text(""+round(theta,3)               ,960,450)
+  
   
   fill("black")
-  rect(400,160,40,20)
-  image(sudut,320,177,200,100)
+  rect(400,200,40,20)
+  image(sudut,320,217,200,100)
   
   
   
   //Koding Simulasi
-  translate(width/2-180, 180); // Pusatkan canvas di tengah
+  translate(width/2-180, 220); // Pusatkan canvas di tengah
   
   // Menghitung percepatan sudut
   thetaAcc = (-gravity / pTali) * sin(theta) -(damping * thetaVel);
