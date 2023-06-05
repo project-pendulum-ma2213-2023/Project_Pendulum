@@ -148,7 +148,10 @@ function draw() {
   
   //Header
   fill("#88A6CD")
-  rect(20,10,1160,70)
+  rect(20,10,3,70)
+  rect(20,10,1160,3)
+  rect(1177,10,3,70)
+  rect(20,80,1160,3)
   
   fill("black")
   textSize(25)
@@ -156,8 +159,8 @@ function draw() {
   textSize(15)
   text("Mata Kuliah Visualisasi Dalam Sains (MA 2213)"   ,445,65)
   
-  image(mtk,340,15,50,50)
-  image(itera,820,15,50,50)
+  image(mtk,340,18,50,50)
+  image(itera,820,18,50,50)
   
   
   //Navigation Bar
