@@ -153,14 +153,14 @@ function draw() {
   rect(1177,10,3,70)
   rect(20,80,1160,3)
   
-  fill("black")
+  fill("white")
   textSize(25)
   text("P R O J E C T   P E N D U L U M"                 ,420,42)
   textSize(15)
   text("Mata Kuliah Visualisasi Dalam Sains (MA 2213)"   ,445,65)
   
-  image(mtk,340,18,50,50)
-  image(itera,820,18,50,50)
+  image(mtk,340,20,50,50)
+  image(itera,820,20,50,50)
   
   
   //Navigation Bar
